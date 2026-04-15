@@ -5,7 +5,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('api.urls')),   # добавлено
+    path('api/v1/', include('api.urls')),  # добавлено API
 ]
 
 if settings.DEBUG:
@@ -15,4 +15,3 @@ if settings.DEBUG:
     urlpatterns += static(
         settings.STATIC_URL, document_root=settings.STATIC_ROOT
     )
-    

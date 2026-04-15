@@ -12,7 +12,6 @@ class GroupSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-    # Отображаем имя автора, но поле author должно быть read_only
     author = serializers.StringRelatedField(read_only=True)
 
     class Meta:
@@ -28,4 +27,3 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = ('id', 'author', 'post', 'text', 'created')
         read_only_fields = ('author', 'post', 'created')
-        
