@@ -23,10 +23,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',                 #добавлено
-    'rest_framework.authtoken',       #добавлено
+    'rest_framework',                 # добавлено
+    'rest_framework.authtoken',       # добавлено
     'posts.apps.PostsConfig',
-    'api',                            #добавлено
+    'api',                            # добавлено
 ]
 
 MIDDLEWARE = [
