@@ -24,7 +24,6 @@ class PostViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated, IsAuthorOrReadOnly]
 
     def perform_create(self, serializer):
-        # При создании автоматически подставляем текущего пользователя как автора
         serializer.save(author=self.request.user)
 
     def perform_update(self, serializer):
