@@ -28,7 +28,6 @@ class PostViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user)
 
     def perform_update(self, serializer):
-        # Дополнительная проверка (разрешение IsAuthorOrReadOnly уже делает это)
         if serializer.instance.author != self.request.user:
             raise PermissionDenied(
                 'Изменение чужого контента запрещено!'
